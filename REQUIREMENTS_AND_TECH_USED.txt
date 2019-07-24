@@ -1,0 +1,37 @@
+THIS MULTI-PLAYER GAME IS BUILT USING PURE SOCKETS. 
+
+
+We have used Python3 to build this game making use of the following modules:
+1. socket module(for communication between the client and server programs)
+2. threading(For synchronisation between different players.)
+3. time (A built in module, used for synchronising the game for e.g. so that players (client programs) receive questions at the same time)
+4. tkinter (Module used to develop the GUI for the game)
+
+All the python modules used are in-built and so there is no need to install anything else if you have
+Python3 running on your system. However, if you are using Ubuntu, you may need to install tkinter
+using: sudo apt-get install python3-tk
+
+After this, you can run the game.
+
+Instructions:
+
+
+IMPORTANT: In the program, we have set the host to the IP address of the system which will act as server and
+chosen a port number. The client programs must have this same combination of host and port number.
+
+NOTE: If you plan to execute the code, please make sure to change the Host address (and the port if required).
+
+If the game is to be run on a SINGLE system, change the host to localhost i.e. 127.0.0.1 and run the server program
+and two instances of the client program(all in different terminals).
+ 
+1. In one terminal, run the server program FIRST. Once the server program is running, the socket on server side
+listens for connections
+
+2. In two separate terminals, run the client program.Each client program should have listed in it, the host
+and the port number corresponding to the server. Once this is done, the client is connected to the server
+and the game can begin.
+3. Once, the client program is run, 2 windows will prop up which serve as the GUI for the game for the client
+
+4. Enter your name to begin the game. The game then provides a question to which the player has to provide
+a false answer. Once the game (server) receives a false answer from every player, it collects all the answers,
+and sends them back to each player. Now, you have to select the right answer.
